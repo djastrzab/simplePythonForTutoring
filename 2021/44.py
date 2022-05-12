@@ -19,7 +19,7 @@ def program():
 
         elif order == "PRZESUN":
             for i in range(0,len(resultWord)):
-                if(resultWord[i])==letter:
+                if(resultWord[i])==letter: #znajdz pierwsze wystapienie litery w słowie
                     resultWord=resultWord[0:i]+ chr((ord(resultWord[i])+1-65)%26+65) + resultWord[i+1:len(resultWord)]
                     break
 
@@ -29,4 +29,8 @@ def program():
 
 
 if __name__ == "__main__":
-    program()
+    resultWord="A"
+    i=0
+    resultWord=chr((ord(resultWord[i])+1-65)%26+65)
+    print(resultWord)
+    #program()

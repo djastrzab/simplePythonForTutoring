@@ -15,17 +15,17 @@ for z in tekst:
     litery.append(l)
 
 
-rodzaj1=None
+aktualny_rodzaj=None
 rodzaj2=None
 dlugosc_rodzaju=0
-dlugosc_rodzaju1=0
+dlugosc_maksymalnego_rodzaju=0
 
 for rodzaj in polecenia:
-    if rodzaj1==rodzaj:
+    if aktualny_rodzaj==rodzaj:
         dlugosc_rodzaju+=1
-        if dlugosc_rodzaju>dlugosc_rodzaju1:
-            dlugosc_rodzaju1=dlugosc_rodzaju
+        if dlugosc_rodzaju>dlugosc_maksymalnego_rodzaju:
+            dlugosc_maksymalnego_rodzaju=dlugosc_rodzaju
             rodzaj2=rodzaj
-    if not rodzaj1==rodzaj:
-        rodzaj1=rodzaj
+    if not aktualny_rodzaj == rodzaj:
+        aktualny_rodzaj=rodzaj
         dlugosc_rodzaju=1

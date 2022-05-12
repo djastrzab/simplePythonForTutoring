@@ -18,14 +18,19 @@ def program():
             resultWord += letter
 
         elif order == "PRZESUN":
-            for char in resultWord:
-                if char == letter:
-                    char=chr((ord(char)+1-65)%26+65)
+            for i in range(0,len(resultWord)):
+                if(resultWord[i])==letter:
+                    resultWord=resultWord[0:i]+ chr((ord(resultWord[i])+1-65)%26+65) + resultWord[i+1:len(resultWord)]
                     break
 
-    print(len(resultWord))
 
+
+    print(resultWord)
 
 
 if __name__ == "__main__":
+    resultWord="AAA"
+    i=1
+    resultWord = resultWord[0:i] + chr((ord(resultWord[i]) + 1 - 65) % 26 + 65) + resultWord[i+1:len(resultWord)]
+    print(resultWord)
     program()

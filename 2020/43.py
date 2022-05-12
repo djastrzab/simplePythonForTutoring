@@ -61,6 +61,7 @@ def znajdz_najmniejsza_pare(pary_do_rozpatrzenia):
 if __name__ == "__main__":
     pary=read_file()
     pary_do_rozpatrzenia=wybierz_pary_do_rozpatrzenia(pary)
+
     print(znajdz_najmniejsza_pare(pary_do_rozpatrzenia))
 
 

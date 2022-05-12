@@ -29,8 +29,4 @@ def program():
 
 
 if __name__ == "__main__":
-    resultWord="AAA"
-    i=1
-    resultWord = resultWord[0:i] + chr((ord(resultWord[i]) + 1 - 65) % 26 + 65) + resultWord[i+1:len(resultWord)]
-    print(resultWord)
     program()
